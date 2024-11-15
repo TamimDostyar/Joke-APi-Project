@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/api/v1/jokes/';
+const BASE_URL = 'https://dostah01.pythonanywhere.com/api/v1/jokes/';
 
 const LANGUAGES = {
     "cs": "Czech",
