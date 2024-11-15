@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="section">
+        <h1 class="title">Pick the language, category, and number of jokes to hear</h1>
+        <div class="container">
+            <form id="jokeForm">
+                <div class="columns">
+                    <div class="column">
+                        <label for="selLang">Language</label>
+                        <div class="select is-fullwidth">
+                            <select name="language" id="selLang">
+                                <!-- Languages will be populated here by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label for="selCat">Category</label>
+                        <div class="select is-fullwidth">
+                            <select name="category" id="selCat">
+                                <!-- Categories will be populated here by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label for="selNum">Number of Jokes</label>
+                        <div class="select is-fullwidth">
+                            <select name="number" id="selNum">
+                                <!-- Number options will be populated here by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label for="jokeId">Specific Joke ID</label>
+                        <input type="number" id="jokeId" class="input is-fullwidth" placeholder="Enter Joke ID (optional)">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button id="btnAmuse" type="submit" class="button is-primary is-fullwidth">Amuse me</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container" id="jokes">
+            <ul id="jokesList" class="list"></ul>
+            <div id="error" class="notification is-danger is-hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
